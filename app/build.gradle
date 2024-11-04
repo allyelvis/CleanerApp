@@ -14,8 +14,18 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file('/home/itsupport/CleanerApp/release-key.jks')
+            storePassword 'your-password'
+            keyAlias 'my-key-alias'
+            keyPassword 'your-key-password'
         }
     }
 }
