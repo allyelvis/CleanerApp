@@ -30,9 +30,9 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./app/build.gradle
 
       - name: Publish to GitHub Packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
-        run: ./gradlew publish
+        run: ./
