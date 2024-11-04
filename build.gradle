@@ -14,3 +14,28 @@ allprojects {
         mavenCentral()
     }
 }
+plugins {
+    id 'java' // Ensure the Java plugin is applied
+    id 'maven-publish'
+}
+
+group = 'com.github.allyelvis' // Your GitHub username
+version = '1.0.0' // Your version number
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java // Publish the Java components
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/allyelvis/CleanerApp") // Your repository URL
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+                password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
