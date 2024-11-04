@@ -13,10 +13,9 @@ allprojects {
         google()
         mavenCentral()
     }
-}
 plugins {
-    id 'java' // Ensure the Java plugin is applied
-    id 'maven-publish'
+    id 'java' // Apply the Java plugin
+    id 'maven-publish' // Apply the Maven Publish plugin
 }
 
 group = 'com.github.allyelvis' // Your GitHub username
