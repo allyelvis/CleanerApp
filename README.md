@@ -23,4 +23,4 @@ MIT License
 Ally Elvis Nzeyimana
 
 ## Contact
-For questions or support, please contact: your-email@example.com
+For questions or support, please contact: allyelvis6569@gmail.com
